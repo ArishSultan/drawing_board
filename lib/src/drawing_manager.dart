@@ -1,7 +1,7 @@
 part of drawing_board;
 
 ///
-class DrawingManager {
+class DrawingManager<T extends DrawingEvent> {
   ///
   DrawingManager(this.paint);
 
@@ -12,7 +12,7 @@ class DrawingManager {
   bool get drawPointer => true;
 
   ///
-  void addDrawingEvent(DrawingEvent event) {
+  void addDrawingEvent(T event) {
     switch (event.type) {
       case DrawingEventType.stop:
         _stopInteractionAndRecord();

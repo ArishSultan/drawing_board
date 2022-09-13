@@ -9,12 +9,12 @@ enum DrawingEventType {
 
 class DrawingEvent {
   const DrawingEvent({
-    required this.id,
     required this.type,
     required this.offset,
+    required this.timestamp,
   });
 
-  final int id;
   final Offset offset;
+  final int timestamp;
   final DrawingEventType type;
 }

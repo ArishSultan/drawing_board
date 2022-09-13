@@ -109,7 +109,7 @@ extension _XPointerEvent on PointerEvent {
     return DrawingEvent(
       type: type,
       offset: position,
-      id: DateTime.now().millisecondsSinceEpoch,
+      timestamp: DateTime.now().millisecondsSinceEpoch,
     );
   }
 }
